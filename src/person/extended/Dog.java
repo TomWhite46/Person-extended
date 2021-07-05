@@ -20,13 +20,12 @@ public class Dog {
 
 //	print deets
 	public void printDeets() {
-		System.out.print("Name: ");
+		System.out.print("\tName: ");
 		System.out.println(name);
-		System.out.print("Age: ");
+		System.out.print("\tAge: ");
 		System.out.println(age);
-		System.out.print("Colour: ");
+		System.out.print("\tColour: ");
 		System.out.println(colour);
-		System.out.println();
 	}
 
 }

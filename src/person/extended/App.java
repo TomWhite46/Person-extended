@@ -32,7 +32,7 @@ public class App {
 		System.out.println();
 		PersonManager.listPeople();
 		System.out.println();
-		PersonManager.removePerson(person2);
+//		PersonManager.removePerson(person2);
 		System.out.println();
 		PersonManager.listPeople();
 		System.out.println();
@@ -50,6 +50,9 @@ public class App {
 		person4.speak();
 		person3.speak();
 		person1.speak();
+
+		System.out.println();
+		PersonManager.printEverything();
 
 	}
 

@@ -105,6 +105,5 @@ public class Person {
 		System.out.println(jobTitle);
 		System.out.print("Phrase: ");
 		System.out.println(saying);
-		System.out.println();
 	}
 }

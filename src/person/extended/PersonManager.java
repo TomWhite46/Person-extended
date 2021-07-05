@@ -47,4 +47,31 @@ public class PersonManager {
 		System.out.println();
 	}
 
+	public static void printEverything() {
+
+		System.out.println("***********************ALL INFORMATION***********************");
+		System.out.println();
+
+		for (Person person : personList) {
+			person.printDeets();
+			System.out.println("--------------------------------------");
+
+			System.out.println("Cats: ");
+			for (Cat cat : person.catList) {
+				cat.printDeets();
+				System.out.println("--------------------------------------");
+			}
+
+			System.out.println("Dogs: ");
+			for (Dog dog : person.dogList) {
+				dog.printDeets();
+				System.out.println("--------------------------------------");
+			}
+
+			System.out.println("##############################################");
+
+		}
+
+	}
+
 }
