@@ -6,16 +6,18 @@ public class PersonManager {
 
 	public static ArrayList<Person> personList = new ArrayList<>();
 
-	public static void addPerson(Person person) {
-		personList.add(person);
+	public static boolean addPerson(Person person) {
+		boolean added = personList.add(person);
 		System.out.print(person.name);
 		System.out.println(" added to system.");
+		return added;
 	}
 
-	public static void removePerson(Person person) {
+	public static boolean removePerson(Person person) {
+		boolean removed = personList.remove(person);
 		System.out.print(person.name);
-		personList.remove(person);
 		System.out.println(" has been removed from the system.");
+		return removed;
 	}
 
 	public static Person findPersonByName(String name) {

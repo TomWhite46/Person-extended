@@ -4,10 +4,11 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Person person1 = new Person("Jeff Goldblum", 34, "Chaotician");
-		Person person2 = new Person("Sam Neill", 36, "Palaeontologist");
-		Person person3 = new Person("Laura Dern", 32, "Palaeobotanist");
-		Person person4 = new Person("Samuel L Jackson", 40, "Computer guy");
+		Person person1 = new Person("Jeff Goldblum", 34, "Chaotician", "Life finds a way.");
+		Person person2 = new Person("Sam Neill", 36, "Palaeontologist", "Don't move a muscle.");
+		Person person3 = new Person("Laura Dern", 32, "Palaeobotanist",
+				"Unless they've figured out how to open doors.");
+		Person person4 = new Person("Samuel L Jackson", 40, "Computer guy", "Hold on to your butts!");
 
 		person1.addDog(new Dog("T. rex", 82, "green"));
 		person1.addCat(new Cat("Fluffy", 24, "white"));
@@ -17,6 +18,7 @@ public class App {
 		person3.addCat(new Cat("Darth Maul", 14, "green"));
 		person4.addDog(new Dog("Dilophosaurus", 99, "green"));
 		person4.addCat(new Cat("The Mouth of Sauron", 7, "brown"));
+		person3.addDog(new Dog("Brachiosaurus", 99, "green"));
 
 		person1.removeCatByName("Fluffy");
 
@@ -33,6 +35,22 @@ public class App {
 		PersonManager.removePerson(person2);
 		System.out.println();
 		PersonManager.listPeople();
+		System.out.println();
+
+		person4.printDeets();
+		person4.catList.get(0).printDeets();
+
+		System.out.println();
+		person3.showDogs();
+		person3.showCats();
+
+		person4.catList.get(0).speak();
+		person3.dogList.get(1).speak();
+		person2.speak();
+		person4.speak();
+		person3.speak();
+		person1.speak();
 
 	}
+
 }
