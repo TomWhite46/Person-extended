@@ -26,7 +26,7 @@ public class App {
 		PersonManager.addPerson(person4);
 
 		System.out.println();
-		PersonManager.findPersonByName("Sam");
+		System.out.println(PersonManager.findPersonByName("Sam").name);
 		System.out.println();
 		PersonManager.listPeople();
 		System.out.println();

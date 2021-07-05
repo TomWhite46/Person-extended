@@ -18,7 +18,7 @@ public class PersonManager {
 		System.out.println(" has been removed from the system.");
 	}
 
-	public static void findPersonByName(String name) {
+	public static Person findPersonByName(String name) {
 
 		System.out.print("Search results for string '");
 		System.out.print(name);
@@ -27,15 +27,12 @@ public class PersonManager {
 		for (Person person : personList) {
 
 			if (person.name.contains(name)) {
-				System.out.print("Name: ");
-				System.out.print(person.name);
-				System.out.print("; Age: ");
-				System.out.print(person.age);
-				System.out.print(", Job: ");
-				System.out.println(person.jobTitle);
+				return person;
 			}
 
 		}
+
+		return null;
 
 	}
 
