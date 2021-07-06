@@ -22,8 +22,10 @@ public class Pet {
 
 //	print deets
 	public void printDeets() {
+
 		System.out.print("\tName: ");
-		System.out.println(this.getName());
+		System.out.print(this.getName());
+		System.out.println(" (" + this.getClass().getSimpleName() + ")");
 		System.out.print("\tAge: ");
 		System.out.println(this.getAge());
 		System.out.print("\tColour: ");

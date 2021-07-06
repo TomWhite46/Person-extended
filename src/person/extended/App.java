@@ -35,18 +35,6 @@ public class App {
 		System.out.println();
 		PersonManager.printEverything();
 
-		System.out.println();
-		Pet pet1 = new Dog("Pet the first", 5, "rainbow");
-		Pet pet2 = new Cat("Pet the second", 20, "purple");
-//		pet1.fetch();		//Does not function as pet1 is a 'Pet' rather than a Dog
-		System.out.println(pet1.getClass() == person2.getPetList().get(1).getClass());
-
-		Dog dog1 = (Dog) pet1;
-		dog1.fetch("boomerang", 50);
-
-		System.out.println(pet1 instanceof Dog);
-		System.out.println(pet1 instanceof Pet);
-		System.out.println(pet1 instanceof Object);
 	}
 
 }

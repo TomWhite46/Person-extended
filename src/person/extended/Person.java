@@ -30,7 +30,9 @@ public class Person {
 	public boolean addPet(Pet pet) {
 		boolean added = this.petList.add(pet);
 		System.out.print(this.name);
-		System.out.print(" is now the owner of the pet ");
+		System.out.print(" is now the owner of the ");
+		System.out.print(pet.getClass().getSimpleName().toLowerCase());
+		System.out.print(" ");
 		System.out.println(pet.getName());
 		return added;
 	}
@@ -38,7 +40,9 @@ public class Person {
 	public boolean removePet(Pet pet) {
 		boolean removed = this.petList.remove(pet);
 		System.out.print(this.name);
-		System.out.print(" has abandoned the pet ");
+		System.out.print(" has abandoned the ");
+		System.out.print(pet.getClass().getSimpleName().toLowerCase());
+		System.out.print(" ");
 		System.out.print(pet.getName());
 		System.out.println(" to its fate");
 		return removed;
