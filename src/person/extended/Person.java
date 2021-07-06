@@ -9,8 +9,8 @@ public class Person {
 	private int age;
 	private String jobTitle;
 	private String saying;
-	private ArrayList<Cat> catList = new ArrayList<>();
-	private ArrayList<Dog> dogList = new ArrayList<>();
+
+	private ArrayList<Pet> petList = new ArrayList<>();
 
 //	constructor
 	public Person(String name, int age, String jobTitle, String saying) {
@@ -26,39 +26,44 @@ public class Person {
 		System.out.println(saying);
 	}
 
-//	add/remove dogs
-	public boolean addDog(Dog pet) {
-		boolean added = this.dogList.add(pet);
+	// add/remove pets:
+	public boolean addPet(Pet pet) {
+		boolean added = this.petList.add(pet);
 		System.out.print(this.name);
-		System.out.print(" is now the owner of the dog ");
+		System.out.print(" is now the owner of the pet ");
 		System.out.println(pet.getName());
 		return added;
 	}
 
-	public boolean removeDog(Dog pet) {
-		boolean removed = this.dogList.remove(pet);
+	public boolean removePet(Pet pet) {
+		boolean removed = this.petList.remove(pet);
 		System.out.print(this.name);
-		System.out.print(" has abandoned the dog ");
+		System.out.print(" has abandoned the pet ");
 		System.out.print(pet.getName());
 		System.out.println(" to its fate");
 		return removed;
 	}
 
-//	lists
-	public void showCats() {
-		System.out.print(name);
-		System.out.print(" owns the following cats: ");
-		for (Cat cat : catList) {
-			System.out.print(cat.getName() + ";");
+	public void removePetByName(String nomen) {
+		for (Pet pet : petList) {
+			if (pet.getName().equals(nomen)) {
+				petList.remove(pet);
+				System.out.print(name);
+				System.out.print(" has abandoned the pet ");
+				System.out.print(pet.getName());
+				System.out.println(" to its fate");
+				break;
+			}
 		}
-		System.out.println();
+
 	}
 
-	public void showDogs() {
+//	lists
+	public void showPets() {
 		System.out.print(name);
-		System.out.print(" owns the following dogs: ");
-		for (Dog dog : dogList) {
-			System.out.print(dog.getName() + ";");
+		System.out.print(" owns the following cats: ");
+		for (Pet pet : petList) {
+			System.out.print(pet.getName() + ";");
 		}
 		System.out.println();
 	}
@@ -80,6 +85,8 @@ public class Person {
 		System.out.print("Phrase: ");
 		System.out.println(saying);
 	}
+
+//	getters/setters
 
 	public String getName() {
 		return name;
@@ -130,44 +137,8 @@ public class Person {
 		this.saying = saying;
 	}
 
-	public ArrayList<Cat> getCatList() {
-		return catList;
-	}
-
-	public ArrayList<Dog> getDogList() {
-		return dogList;
-	}
-
-	// add/remove cats:
-	public boolean addCat(Cat pet) {
-		boolean added = this.catList.add(pet);
-		System.out.print(this.name);
-		System.out.print(" is now the owner of the cat ");
-		System.out.println(pet.getName());
-		return added;
-	}
-
-	public boolean removeCat(Cat pet) {
-		boolean removed = this.catList.remove(pet);
-		System.out.print(this.name);
-		System.out.print(" has abandoned the cat ");
-		System.out.print(pet.getName());
-		System.out.println(" to its fate");
-		return removed;
-	}
-
-	public void removeCatByName(String nomen) {
-		for (Cat pet : catList) {
-			if (pet.getName().equals(nomen)) {
-				catList.remove(pet);
-				System.out.print(name);
-				System.out.print(" has abandoned the cat ");
-				System.out.print(pet.getName());
-				System.out.println(" to its fate");
-				break;
-			}
-		}
-
+	public ArrayList<Pet> getPetList() {
+		return petList;
 	}
 
 }

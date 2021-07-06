@@ -56,15 +56,9 @@ public class PersonManager {
 			person.printDeets();
 			System.out.println("--------------------------------------");
 
-			System.out.println("Cats: ");
-			for (Cat cat : person.getCatList()) {
-				cat.printDeets();
-				System.out.println("--------------------------------------");
-			}
-
-			System.out.println("Dogs: ");
-			for (Dog dog : person.getDogList()) {
-				dog.printDeets();
+			System.out.println("Pets: ");
+			for (Pet pet : person.getPetList()) {
+				pet.printDeets();
 				System.out.println("--------------------------------------");
 			}
 
