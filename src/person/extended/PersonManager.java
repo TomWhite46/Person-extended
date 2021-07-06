@@ -8,14 +8,14 @@ public class PersonManager {
 
 	public static boolean addPerson(Person person) {
 		boolean added = personList.add(person);
-		System.out.print(person.name);
+		System.out.print(person.getName());
 		System.out.println(" added to system.");
 		return added;
 	}
 
 	public static boolean removePerson(Person person) {
 		boolean removed = personList.remove(person);
-		System.out.print(person.name);
+		System.out.print(person.getName());
 		System.out.println(" has been removed from the system.");
 		return removed;
 	}
@@ -28,7 +28,7 @@ public class PersonManager {
 
 		for (Person person : personList) {
 
-			if (person.name.contains(name)) {
+			if (person.getName().contains(name)) {
 				return person;
 			}
 
@@ -41,7 +41,7 @@ public class PersonManager {
 	public static void listPeople() {
 		System.out.print("The following people are currently logged: ");
 		for (Person person : personList) {
-			System.out.print(person.name);
+			System.out.print(person.getName());
 			System.out.print(", ");
 		}
 		System.out.println();
@@ -57,13 +57,13 @@ public class PersonManager {
 			System.out.println("--------------------------------------");
 
 			System.out.println("Cats: ");
-			for (Cat cat : person.catList) {
+			for (Cat cat : person.getCatList()) {
 				cat.printDeets();
 				System.out.println("--------------------------------------");
 			}
 
 			System.out.println("Dogs: ");
-			for (Dog dog : person.dogList) {
+			for (Dog dog : person.getDogList()) {
 				dog.printDeets();
 				System.out.println("--------------------------------------");
 			}

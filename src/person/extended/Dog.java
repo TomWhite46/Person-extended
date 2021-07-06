@@ -2,20 +2,45 @@ package person.extended;
 
 public class Dog {
 
-	public String name;
-	public int age;
-	public String colour;
+	private String name;
+	private int age;
+	private String colour;
 
 	public Dog(String name, int age, String colour) {
-		this.name = name;
-		this.age = age;
-		this.colour = colour;
-
+		this.setName(name);
+		this.setAge(age);
+		this.setColour(colour);
 	}
 
 	public void speak() {
 		System.out.print(this.name);
 		System.out.println(": Woof!");
+	}
+
+//	Setters
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
+
+//	Getters
+	public String getName() {
+		return this.name;
+	}
+
+	public int getAge() {
+		return this.age;
+	}
+
+	public String getColour() {
+		return this.colour;
 	}
 
 //	print deets

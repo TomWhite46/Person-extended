@@ -4,7 +4,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Person person1 = new Person("Jeff Goldblum", 34, "Chaotician", "Life finds a way.");
+		Person person1 = new Person("Jeff Goldblum", 75, "Chaotician", "Life finds a way.");
 		Person person2 = new Person("Sam Neill", 36, "Palaeontologist", "Don't move a muscle.");
 		Person person3 = new Person("Laura Dern", 32, "Palaeobotanist",
 				"Unless they've figured out how to open doors.");
@@ -28,28 +28,32 @@ public class App {
 		PersonManager.addPerson(person4);
 
 		System.out.println();
-		System.out.println(PersonManager.findPersonByName("Sam").name);
+		System.out.println(PersonManager.findPersonByName("Jeff").getName());
 		System.out.println();
 		PersonManager.listPeople();
 		System.out.println();
-//		PersonManager.removePerson(person2);
+		PersonManager.removePerson(person2);
 		System.out.println();
 		PersonManager.listPeople();
 		System.out.println();
 
-		person4.printDeets();
-		person4.catList.get(0).printDeets();
+		person1.printDeets();
+		person4.getCatList().get(0).printDeets();
 
 		System.out.println();
 		person3.showDogs();
 		person3.showCats();
 
-		person4.catList.get(0).speak();
-		person3.dogList.get(1).speak();
+		person4.getCatList().get(0).speak();
+		person3.getDogList().get(1).speak();
 		person2.speak();
 		person4.speak();
 		person3.speak();
 		person1.speak();
+
+		System.out.println();
+
+		person1.fire();
 
 		System.out.println();
 		PersonManager.printEverything();
